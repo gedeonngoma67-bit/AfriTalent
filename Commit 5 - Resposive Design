@@ -1,0 +1,3 @@
+git add css/style.css
+git commit -m "CSS : responsive design mobile et tablette, media queries"
+git push origin main
