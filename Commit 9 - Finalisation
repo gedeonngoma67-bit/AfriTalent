@@ -1,0 +1,3 @@
+git add .
+git commit -m "Finalisation : corrections responsive, optimisation du code et commentaires"
+git push origin main
