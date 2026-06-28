@@ -1,0 +1,17 @@
+git init
+git branch -M main
+git remote add origin https://github.com/gedeonngoma67-bit/AfriTalent.git
+
+echo > index.html
+echo > freelances.html
+echo > tarifs.html
+echo > about.html
+echo > contact.html
+mkdir css && echo > css/style.css
+mkdir js && echo > js/main.js
+echo > README.md
+echo > .gitignore
+
+git add .
+git commit -m "Init : création du dépôt, arborescence des fichiers et structure HTML de base"
+git push origin main
