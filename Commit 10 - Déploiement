@@ -1,3 +1,0 @@
-git add README.md docs/NOM_Prenom_Presentation.pptx
-git commit -m "Déploiement : GitHub Pages activé, README finalisé et présentation PowerPoint ajoutée"
-git push origin main
