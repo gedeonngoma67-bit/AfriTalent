@@ -15,3 +15,4 @@ echo > .gitignore
 git add .
 git commit -m "Init : création du dépôt, arborescence des fichiers et structure HTML de base"
 git push origin main
+
