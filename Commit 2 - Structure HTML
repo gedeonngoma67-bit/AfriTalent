@@ -1,3 +1,4 @@
 git add .
 git commit -m "HTML : structure complète des 5 pages avec sections et contenu texte"
 git push origin main
+
