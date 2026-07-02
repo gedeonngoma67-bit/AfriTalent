@@ -322,6 +322,139 @@ h1 {
     border-radius: 10px;
 }
 
+// === Dark Mode / Light Mode ===
+const toggleBtn = document.getElementById("darkModeToggle");
+const body = document.body;
+
+// Charger le thème sauvegardé
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark");
+}
+
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    if (body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+}
+
+// === Navbar dynamique au scroll ===
+const navbar = document.querySelector(".navbar");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
+// === Bouton retour en haut ===
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
+  }
+});
+if (backToTop) {
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+// === Compteurs animés ===
+const counters = document.querySelectorAll(".counter");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const counter = entry.target;
+      let target = +counter.getAttribute("data-target");
+      let count = 0;
+      const update = setInterval(() => {
+        if (count < target) {
+          count++;
+          counter.textContent = count;
+        } else {
+          clearInterval(update);
+        }
+      }, 20);
+      observer.unobserve(counter);
+    }
+  });
+});
+counters.forEach(c => observer.observe(c));
+
+// === Filtrage freelances ===
+const filterBtns = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".freelance-card");
+
+filterBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const category = btn.getAttribute("data-category");
+    cards.forEach(card => {
+      if (category === "all" || card.classList.contains(category)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
+
+
+// === Validation formulaire contact ===
+const form = document.querySelector("form");
+if (form) {
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    let valid = true;
+
+    const email = form.querySelector("input[type='email']");
+    const message = form.querySelector("textarea");
+
+    // Vérif email
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regex.test(email.value)) {
+      valid = false;
+      alert("Email invalide !");
+    }
+
+    // Vérif longueur message
+    if (message.value.length < 20) {
+      valid = false;
+      alert("Message trop court (20 caractères min)");
+    }
+
+    if (valid) {
+      alert("Message envoyé avec succès !");
+      form.reset();
+    }
+  });
+  
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hiddenElements = document.querySelectorAll(".hidden");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  hiddenElements.forEach(el => observer.observe(el));
+});
+
+// Script principal AfriTalent
+console.log("Bienvenue sur AfriTalent !");
 
 
 ## Capture d’écran
