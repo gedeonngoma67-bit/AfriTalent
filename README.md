@@ -29,6 +29,38 @@ Elle permet aux entreprises de découvrir des freelances qualifiés et de consul
 - Carousel Bootstrap pour les témoignages  
 
 ---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>AfriTalent</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <!-- Bootstrap 5 via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">AfriTalent</a>
+      <ul class="navbar-nav">
+        <li><a class="nav-link" href="freelances.html">Freelances</a></li>
+        <li><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+        <li><a class="nav-link" href="about.html">À propos</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Bienvenue sur AfriTalent</h1>
+    <p>La plateforme des freelances Tech en <b>Afrique</b>.</p>
+    <img class="image-afritalent" src="c:\Users\Lenovo\Pictures\Image Afritalent.jpg">
+  </main>
+  <footer>
+    <p>© 2026 AfriTalent</p>
+  </footer>
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="fr">
