@@ -53,4 +53,4 @@ Navigue entre les pages via la navbar.
 
 ## 🏁 Déploiement
 Le site est accessible en ligne via GitHub Pages :  
-👉 [https://NGOMA-Emmanuel-Gedeon.github.io/AfriTalent](https://NGOMA-Emmanuel-Gedeon.github.io/AfriTalent)
+👉 [https://NGOMA-Emmanuel-Gedeon.github.io/AfriTalent](https://github.com/gedeonngoma67-bit/AfriTalent)
